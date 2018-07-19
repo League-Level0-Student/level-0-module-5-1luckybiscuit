@@ -53,37 +53,35 @@ void skill1() {
 	}
 
 	void skill4() { // In a pop-up, ask the user for the city they live in 
-
-
-
-	// If they answered "San Diego", tell them they live in America's Finest City 
-
-
-
-	// Otherwise, tell them to move to San Diego 
-
-
-
+		String sd = JOptionPane.showInputDialog("What city do you live in?");
+		// If they are shorter than 36 inches, tell them to eat their Wheaties
+		if(sd.equalsIgnoreCase("San Diego")) {
+			// If they answered "San Diego", tell them they live in America's Finest City 
+			JOptionPane.showMessageDialog(null, "You live in America's Finest City! Very cool!");
+			}else {
+			// Otherwise, tell them to move to San Diego 
+			JOptionPane.showMessageDialog(null, "You should move to San Diego.");
+			}
 	// Create a variable - cars - and initialize it to the number of cars your family has. // If there are 0 cars, use a pop-up to display, "I bet you use public transportation." 
-
-
-
-	// If there is 1 car, use a pop-up to display the make/model of the car 
-
-
-
-	// If there is more than 1 car, use a pop-up to display how many wheels the // cars have between them. 
-
-
+		String cars = JOptionPane.showInputDialog("How many cars do you have? (In number form)");
+		int c = Integer.parseInt(cars);
+		if(c == 0) {
+			JOptionPane.showMessageDialog(null, "I bet you use public transportation.");
+			}else if (c == 1 ){
+			// If there is 1 car, use a pop-up to display the make/model of the car 
+			JOptionPane.showInputDialog(null, "What model is it? Toyota? Subaru?");
+			JOptionPane.showMessageDialog(null, "Ah, good choice.");
+			}else {
+				// If there is more than 1 car, use a pop-up to display how many wheels the // cars have between them. 
+				JOptionPane.showMessageDialog(null, "If I am correct, you should have " + (c*4) + " wheels total (not including spares).");
+			}
 
 	}
 
 	void skill5() { // In a pop-up, ask the user for the name of their school 
-
-
-
+		String school = JOptionPane.showInputDialog("Where do you go to school? Just curious.");
 	// In another pop-up, tell the user, that their school is a fantastic school. // You must include the name of the school in the message. 
-
+		JOptionPane.showMessageDialog(null, school + "? I've heard great things about " + school + "! Truly fantastic!");
 
 
 	}
